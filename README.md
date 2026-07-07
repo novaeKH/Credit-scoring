@@ -40,13 +40,3 @@ submissions/
 
 Python, pandas, NumPy, scikit-learn, CatBoost, matplotlib.
 
-## Запуск
-
-```bash
-pip install -r requirements.txt
-```
-
-После установки зависимостей запустить ноутбуки по порядку:
-
-1. `01_data_preprocessing.ipynb`
-2. `02_modeling.ipynb`
