@@ -1,4 +1,23 @@
-/data
-.venv
-/processed
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# CatBoost logs
 catboost_info/
+
+# Data
+data/
+*.parquet
+
+# macOS
+.DS_Store
+
+catboost_info/
+
+processed/train_features.csv
+processed/test_features.csv
