@@ -24,8 +24,8 @@ from credit_scoring.modeling import (
 
 
 def main():
-    report = Path("reports/portfolio")
-    models = Path("models/portfolio")
+    report = Path("reports/evaluation")
+    models = Path("models/trained")
     report.mkdir(parents=True, exist_ok=True)
     models.mkdir(parents=True, exist_ok=True)
     for filename in [
@@ -38,31 +38,23 @@ def main():
     target = data["TARGET"]
     features = data.drop(columns=["TARGET", "SK_ID_CURR"])
     development, holdout = train_test_split(
-        np.arange(len(data)),
-        test_size=0.2,
-        stratify=target,
-        random_state=42,
+        np.arange(len(data)), test_size=0.2, stratify=target, random_state=42
     )
     train, calibration = train_test_split(
-        development,
-        test_size=0.25,
-        stratify=target.iloc[development],
-        random_state=42,
+        development, test_size=0.25, stratify=target.iloc[development], random_state=42
     )
     split = pd.Series("train", index=data.index)
     split.iloc[calibration] = "calibration"
     split.iloc[holdout] = "holdout"
     data[["SK_ID_CURR", "TARGET"]].assign(split=split).to_csv(
-        report / "split_membership.csv",
-        index=False,
+        report / "split_membership.csv", index=False
     )
     groups = feature_groups(features)
     (report / "feature_groups.json").write_text(json.dumps(groups, indent=2))
     cat_features, categorical = prepare_catboost(features)
     folds = list(
         StratifiedKFold(3, shuffle=True, random_state=42).split(
-            features.iloc[train],
-            target.iloc[train],
+            features.iloc[train], target.iloc[train]
         )
     )
     rows = []

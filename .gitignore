@@ -23,7 +23,7 @@ processed/train_features.csv
 processed/test_features.csv
 processed/*
 
-models/portfolio/
-reports/portfolio/split_membership.csv
-reports/portfolio/holdout_predictions.csv
+models/trained/
+reports/evaluation/split_membership.csv
+reports/evaluation/holdout_predictions.csv
 *.log

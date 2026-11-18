@@ -53,7 +53,7 @@ def build_dataset(data_dir: Path, output_dir: Path) -> pd.DataFrame:
     result.to_parquet(output_dir / "train_features.parquet", index=False)
     pd.DataFrame(quality).to_csv(output_dir / "source_quality.csv", index=False)
     result.isna().mean().sort_values(ascending=False).rename("missing_share").to_csv(
-        output_dir / "feature_missingness.csv",
+        output_dir / "feature_missingness.csv"
     )
     audit = {
         "rows_before_join": len(application),
