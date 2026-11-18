@@ -1,0 +1,33 @@
+{
+  "source_commit": "5dd146a6a3bea87489c0234f4bb43bf2ab5f3afe",
+  "protocol": "Initial 80/20 stratified split, seed 42; model selection on the validation split",
+  "metrics_rounded_in_original_readme": [
+    {
+      "model": "CatBoost",
+      "roc_auc": 0.791,
+      "average_precision": 0.2931
+    },
+    {
+      "model": "HistGradientBoosting",
+      "roc_auc": 0.7866,
+      "average_precision": 0.2831
+    },
+    {
+      "model": "Random Forest",
+      "roc_auc": 0.7669,
+      "average_precision": 0.2529
+    },
+    {
+      "model": "Decision Tree",
+      "roc_auc": 0.7161,
+      "average_precision": 0.1941
+    },
+    {
+      "model": "Logistic Regression (unscaled, convergence warning)",
+      "roc_auc": 0.6451,
+      "average_precision": 0.1301
+    }
+  ],
+  "kaggle_public_score_reported_in_original_readme": 0.7891,
+  "kaggle_submission_repeated_in_portfolio_update": false
+}
