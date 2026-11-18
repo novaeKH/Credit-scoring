@@ -1,0 +1,8 @@
+table,rows,columns,missing_cells,clients
+bureau,1716428,17,3939947,305811.0
+bureau_balance,27299925,3,0,
+POS_CASH_balance,10001358,8,52158,337252.0
+installments_payments,13605401,8,5810,339587.0
+credit_card_balance,3840312,23,5877356,103558.0
+previous_application,1670214,37,11109336,338857.0
+application_train,307511,122,9152465,307511.0

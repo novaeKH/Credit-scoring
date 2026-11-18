@@ -1,0 +1,14 @@
+{
+  "seed": 42,
+  "cv_folds": 3,
+  "catboost_iterations": 500,
+  "catboost_depth": 6,
+  "catboost_learning_rate": 0.05,
+  "logistic_C": 0.1,
+  "platform": "macOS-26.3.1-arm64-arm-64bit",
+  "train_rows": 184506,
+  "calibration_rows": 61502,
+  "holdout_rows": 61503,
+  "calibration_slope": 1.0407746641478652,
+  "calibration_intercept": 0.08010384893614557
+}
