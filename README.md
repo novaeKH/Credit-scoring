@@ -44,7 +44,7 @@ AP рассчитана через `average_precision_score`, а не трапе
 | Вся история | 226 | 0.7825 ± 0.0025 |
 
 Полная история дала более заметную прибавку, чем добавление одного бюро.
-Числа по каждому фолду сохранены в `reports/portfolio/cv_results.csv`.
+Числа по каждому фолду сохранены в `reports/evaluation/cv_results.csv`.
 Время обучения в этом файле — длительность конкретного запуска, а не отдельный
 сравнительный benchmark скорости.
 
@@ -91,14 +91,13 @@ src/credit_scoring/prepare.py     сборка признаков и обзор 
 src/credit_scoring/modeling.py    preprocessing, модели и метрики
 src/credit_scoring/experiment.py  CV, сравнение групп и калибровка
 notebooks/                       данные, графики и интерпретация
-reports/portfolio/               результаты нового полного запуска
+reports/evaluation/               результаты нового полного запуска
 reports/initial_metrics.json     результаты первоначального сравнения
-docs/INTERVIEW_RU.md              рассказ на пять минут и вопросы
 ```
 
 Файлы `models/catboost_credit_scoring.cbm` и
 `processed/submission_catboost.csv` относятся к первоначальному эксперименту.
-Новые локальные модели сохраняются отдельно в `models/portfolio/`.
+Новые локальные модели сохраняются отдельно в `models/trained/`.
 Новая отправка на Kaggle не выполнялась.
 
 ## Воспроизведение
