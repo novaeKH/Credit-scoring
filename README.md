@@ -126,14 +126,3 @@ VS Code с окружением проекта. Индивидуальные hol
 разбиений, подготовленные таблицы и новые веса сохраняются локально и исключены
 из Git.
 
-## Для резюме
-
-**RU:** Построил модель риска платёжных затруднений на 307 тыс. клиентов Home
-Credit: 226 признаков из семи таблиц, CatBoost ROC-AUC 0.7859,
-AP 0.2870 на holdout. Исправил preprocessing линейного baseline,
-сравнил группы признаков на трёх фолдах и проверил калибровку вероятностей.
-
-**EN:** Built a Home Credit payment-risk model using 226 features from seven
-tables and 307k labeled clients. Achieved 0.7859 ROC-AUC and
-0.2870 average precision with CatBoost; improved the logistic
-baseline, evaluated feature groups with three-fold CV, and assessed calibration.
